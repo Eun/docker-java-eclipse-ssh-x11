@@ -40,7 +40,7 @@ RUN apt-get update && \
     echo "export JAVA_INCLUDE_PATH=/usr/java/openjdk-13/include/" >> /etc/profile && \
     echo "export JAVA_HOME=/usr/java/openjdk-13/" >> /etc/profile && \
     apt-get install -y libgtk-3-dev wget && \
-    wget -O /tmp/eclipse.tar.gz http://eclipse.mirror.garr.it/mirrors/eclipse/technology/epp/downloads/release/2019-12/R/eclipse-java-2019-12-R-linux-gtk-x86_64.tar.gz && \
+    wget -O /tmp/eclipse.tar.gz https://ftp.fau.de/eclipse/technology/epp/downloads/release/2020-03/M2/eclipse-jee-2020-03-M2-linux-gtk-x86_64.tar.gz && \
     tar xzfv /tmp/eclipse.tar.gz && \
     mv eclipse /opt/ && \
     ln -s /opt/eclipse/eclipse /usr/sbin/
