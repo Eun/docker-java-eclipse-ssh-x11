@@ -37,6 +37,8 @@ RUN apt-get update && \
     echo "Compression no"                                >> /etc/ssh/sshd_config && \
     mkdir /var/run/sshd                                                          && \
     echo "export PATH=\$PATH:/usr/java/openjdk-13/bin/"   >> /etc/profile        && \
+    echo "export JAVA_INCLUDE_PATH=/usr/java/openjdk-13/include/" >> /etc/profile && \
+    echo "export JAVA_HOME=/usr/java/openjdk-13/" >> /etc/profile && \
     apt-get install -y libgtk-3-dev wget && \
     wget -O /tmp/eclipse.tar.gz http://eclipse.mirror.garr.it/mirrors/eclipse/technology/epp/downloads/release/2019-12/R/eclipse-java-2019-12-R-linux-gtk-x86_64.tar.gz && \
     tar xzfv /tmp/eclipse.tar.gz && \
